@@ -6,12 +6,15 @@
     android:orientation="vertical"
     android:background="@color/layout_background"
     tools:context=".NewsFragment">
-    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvNews"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp">
     </androidx.recyclerview.widget.RecyclerView>
-    <ProgressBar android:id="@+id/progressBar"
+
+    <ProgressBar
+        android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
         android:visibility="invisible"
         android:layout_width="match_parent"
