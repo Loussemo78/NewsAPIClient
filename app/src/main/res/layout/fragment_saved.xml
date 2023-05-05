@@ -7,8 +7,6 @@
     android:background="@color/layout_background"
     tools:context=".SavedFragment">
 
-
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSaved"
         android:layout_width="match_parent"
