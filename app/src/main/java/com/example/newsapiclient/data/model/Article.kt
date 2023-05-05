@@ -10,6 +10,7 @@ import java.io.Serializable
 )
 data class Article(
     @PrimaryKey(autoGenerate = true)
+    val id : Int? = null,
     @SerializedName("author")
     val author: String?,
     @SerializedName("content")
@@ -25,5 +26,5 @@ data class Article(
     @SerializedName("url")
     val url: String?,
     @SerializedName("urlToImage")
-    val urlToImage: String
+    val urlToImage: String?
 ): Serializable

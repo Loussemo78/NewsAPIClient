@@ -1,7 +1,6 @@
 package com.example.newsapiclient.data.db
 
 import androidx.room.TypeConverter
-import androidx.room.TypeConverters
 import com.example.newsapiclient.data.model.Source
 
 class Converters {
@@ -14,6 +13,6 @@ class Converters {
 
     @TypeConverter
     fun toSource(name:String):Source{
-        return Source(name , name)
+        return Source(name,name)
     }
 }
