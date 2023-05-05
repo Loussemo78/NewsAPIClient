@@ -18,7 +18,8 @@ class NewsViewModel(
     private val getNewsHeadLinesUseCase: GetNewsHeadLinesUseCase,
     private val getSearchedNewsUseCase: GetSearchedNewsUseCase,
     private val savedNewsUseCase: SaveNewsUseCase,
-    private val getSavedNewsUseCase: GetSavedNewsUseCase
+    private val getSavedNewsUseCase: GetSavedNewsUseCase,
+    private val deleteSavedNewsUseCase: DeleteSavedNewsUseCase
 ): AndroidViewModel(app) {
     val newsHeadLines : MutableLiveData<Resource<APIResponse>> = MutableLiveData()
 
@@ -102,4 +103,8 @@ class NewsViewModel(
             emit(it)
         }
     }
+    fun deleteArticle(article: Article) = viewModelScope.launch {
+        deleteSavedNewsUseCase.execute(article)
+    }
+
 }
